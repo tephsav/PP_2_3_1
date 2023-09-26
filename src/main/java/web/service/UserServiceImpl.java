@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
-    @Transactional
     @Override
     public List<User> findAll() {
         return userDao.findAll();
@@ -40,7 +39,6 @@ public class UserServiceImpl implements UserService {
         userDao.deleteUser(id);
     }
 
-    @Transactional
     @Override
     public User findById(Long id) {
         return userDao.findById(id);
